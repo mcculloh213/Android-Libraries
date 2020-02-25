@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Widget.Core.ProgressBar" parent="Widget.AppCompat.ProgressBar">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_margin">@dimen/layout_margin_small</item>
+    </style>
+    <style name="Widget.Core.ProgressBar.Text" parent="Container.Fit">
+        <item name="android:gravity">center</item>
+        <item name="android:textAppearance">@style/TextAppearance.Core.Headline6</item>
+    </style>
+
+    <!-- region Bottom Sheets -->
+    <style name="Widget.Core.BottomSheet.Modal" parent="Widget.MaterialComponents.BottomSheet.Modal">
+        <item name="shapeAppearanceOverlay">?shapeAppearanceLargeComponent</item>
+    </style>
+    <!-- endregion -->
+
+    <!-- region Navigation Drawer -->
+    <style name="Widget.Core.NavigationView" parent="Widget.MaterialComponents.NavigationView">
+        <item name="itemTextAppearance">?textAppearanceBody2</item>
+    </style>
+    <!-- endregion -->
+</resources>

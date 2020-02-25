@@ -1,0 +1,2 @@
+include ':app', ':bnf', ':bnf-lint', ':groupie-material', ':hmt-speech-recognizer', ':kafkaesque', ':text-to-speech', ':opengl'
+rootProject.name='Libraries'

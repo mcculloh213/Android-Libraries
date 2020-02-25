@@ -1,0 +1,13 @@
+apply plugin: 'java-library'
+apply plugin: 'kotlin'
+
+dependencies {
+    compileOnly deps.jetbrains.kotlin.stdlib.jdk7
+    // Lint
+    compileOnly deps.android.tools.lint.api
+    compileOnly deps.android.tools.lint.checks
+    // Lint Testing
+    testImplementation deps.android.tools.lint.lint
+    testImplementation deps.android.tools.lint.tests
+    testImplementation deps.junit
+}

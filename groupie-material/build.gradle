@@ -1,0 +1,55 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+android {
+    compileSdkVersion 28
+
+    androidExtensions {
+        experimental = true
+    }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        minSdkVersion 27
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation deps.jetbrains.kotlin.stdlib.jdk7
+
+    implementation deps.androidx.appcompat
+    implementation deps.androidx.core.ktx
+    implementation deps.androidx.constraintlayout
+    implementation deps.androidx.paging.runtime
+    implementation deps.androidx.paging.kotlin_runtime
+    api deps.androidx.recyclerview
+
+    api deps.google.material
+
+    implementation deps.xwray.groupie
+    implementation deps.xwray.kotlin_extensions
+
+    testImplementation deps.junit
+    androidTestImplementation deps.androidx.test.junit
+    androidTestImplementation deps.androidx.test.espresso.core
+}

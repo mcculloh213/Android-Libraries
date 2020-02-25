@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/bnf" />
+            <option value="$PROJECT_DIR$/bnf-lint" />
+            <option value="$PROJECT_DIR$/groupie-material" />
+            <option value="$PROJECT_DIR$/hmt-speech-recognizer" />
+            <option value="$PROJECT_DIR$/kafkaesque" />
+            <option value="$PROJECT_DIR$/opengl" />
+            <option value="$PROJECT_DIR$/text-to-speech" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+        <option name="testRunner" value="PLATFORM" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,3 @@
+[submodule "kafkaesque"]
+	path = kafkaesque
+	url = https://github.com/mcculloh213/Kafkaesque.git

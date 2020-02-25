@@ -1,0 +1,97 @@
+ext.kotlin_version = "1.3.61"
+ext.deps = [:]
+
+def versions = [:]
+    versions.appcompat = "1.1.0"
+    versions.core = "1.2.0"
+    versions.core_ktx = "1.2.0"
+    versions.constraintlayout = "1.1.3"
+    versions.gradle = "3.5.3"
+    versions.groupie = "2.7.0"
+    versions.linting = "26.5.1"
+    versions.lifecycle = "2.2.0"
+    versions.material = "1.2.0-alpha04"
+    versions.navigation = "2.2.1"
+    versions.paging = "2.1.1"
+    versions.recyclerview = "1.1.0"
+    versions.rxjava = "2.2.15"
+    versions.rxandroid = "2.1.1"
+    versions.rxkotlin = "2.2.0"
+    versions.test = [:]
+        versions.test.junit = "4.12"
+        versions.test.junit_ext = "1.1.1"
+        versions.test.espresso = "3.2.0"
+
+def android = [:]
+    def tools = [:]
+        tools.gradle = "com.android.tools.build:gradle:$versions.gradle"
+        def linting = [:]
+            linting.api = "com.android.tools.lint:lint-api:$versions.linting"
+            linting.checks = "com.android.tools.lint:lint-checks:$versions.linting"
+            linting.lint = "com.android.tools.lint:lint:$versions.linting"
+            linting.tests = "com.android.tools.lint:lint-tests:$versions.linting"
+        tools.lint = linting
+    android.tools = tools
+ext.deps.android = android
+
+def jetbrains = [:]
+    def kotlin = [:]
+        kotlin.gradle_plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        def stdlib = [:]
+            stdlib.jdk7 = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+            stdlib.jdk8 = "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+        kotlin.stdlib = stdlib
+    jetbrains.kotlin = kotlin
+ext.deps.jetbrains = jetbrains
+
+def androidx = [:]
+    androidx.appcompat = "androidx.appcompat:appcompat:$versions.appcompat"
+    def core = [:]
+        core.ktx = "androidx.core:core-ktx:$versions.core_ktx"
+    androidx.core = core
+    androidx.constraintlayout = "androidx.constraintlayout:constraintlayout:$versions.constraintlayout"
+    def lifecycle = [:]
+        lifecycle.extensions = "androidx.lifecycle:lifecycle-extensions:$versions.lifecycle"
+        lifecycle.kotlin_viewmodel_extensions = "androidx.lifecycle:lifecycle-viewmodel-ktx:$versions.lifecycle"
+    androidx.lifecycle = lifecycle
+    def navigation = [:]
+        navigation.kotlin_fragment = "androidx.navigation:navigation-fragment-ktx:$versions.navigation"
+        navigation.kotlin_ui = "androidx.navigation:navigation-ui-ktx:$versions.navigation"
+    androidx.navigation = navigation
+    def paging = [:]
+        paging.runtime = "androidx.paging:paging-runtime:$versions.paging"
+        paging.kotlin_runtime = "androidx.paging:paging-runtime-ktx:$versions.paging"
+    androidx.paging = paging
+    androidx.recyclerview = "androidx.recyclerview:recyclerview:$versions.recyclerview"
+    def testx = [:]
+        testx.junit = "androidx.test.ext:junit:$versions.test.junit_ext"
+        def espresso = [:]
+            espresso.core = "androidx.test.espresso:espresso-core:$versions.test.espresso"
+        testx.espresso = espresso
+    androidx.test = testx
+ext.deps.androidx = androidx
+
+def reactivex = [:]
+    reactivex.rxjava = "io.reactivex.rxjava2:rxjava:$versions.rxjava"
+    reactivex.rxandroid = "io.reactivex.rxjava2:rxandroid:$versions.rxandroid"
+    reactivex.rxkotlin = "io.reactivex.rxjava2:rxkotlin:$versions.rxkotlin"
+ext.deps.reactivex = reactivex
+
+def google = [:]
+    google.material = "com.google.android.material:material:$versions.material"
+ext.deps.google = google
+
+ext.deps.junit = "junit:junit:$versions.test.junit"
+
+def xwray = [:]
+    xwray.groupie = "com.xwray:groupie:$versions.groupie"
+    xwray.kotlin_extensions = "com.xwray:groupie-kotlin-android-extensions:$versions.groupie"
+ext.deps.xwray = xwray
+
+static def addRepos(RepositoryHandler handler) {
+    handler.google()
+    handler.jcenter()
+    handler.mavenCentral()
+    handler.maven { url "https://jitpack.io" }
+}
+ext.addRepos = this.&addRepos

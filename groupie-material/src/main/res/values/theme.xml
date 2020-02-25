@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.Core.DayNight.NoActionBar" parent="Theme.Core.NoActionBar"/>
+    <style name="Theme.Core.DayNight" parent="Theme.Core"/>
+    <style name="Theme.Core.NoActionBar" parent="Theme.Core">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.Core" parent="AbstractTheme.Core">
+        <!-- region Material Color Attributes -->
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryVariant">@color/color_primary_variant</item>
+        <item name="colorSecondary">@color/color_secondary</item>
+        <item name="colorSecondaryVariant">@color/color_secondary_variant</item>
+
+        <item name="android:colorBackground">@color/color_background</item>
+        <item name="colorSurface">@color/color_surface</item>
+        <item name="colorError">@color/color_error</item>
+
+        <item name="colorOnPrimary">@color/color_on_primary</item>
+        <item name="colorOnSecondary">@color/color_on_secondary</item>
+        <item name="colorOnBackground">@color/color_on_background</item>
+        <item name="colorOnSurface">@color/color_on_surface</item>
+        <item name="colorOnError">@color/color_on_error</item>
+        <!-- endregion -->
+
+        <!-- region Material Type Attributes -->
+        <item name="textAppearanceHeadline1">@style/TextAppearance.Core.Headline1</item>
+        <item name="textAppearanceHeadline2">@style/TextAppearance.Core.Headline2</item>
+        <item name="textAppearanceHeadline3">@style/TextAppearance.Core.Headline3</item>
+        <item name="textAppearanceHeadline4">@style/TextAppearance.Core.Headline4</item>
+        <item name="textAppearanceHeadline5">@style/TextAppearance.Core.Headline5</item>
+        <item name="textAppearanceHeadline6">@style/TextAppearance.Core.Headline6</item>
+        <item name="textAppearanceSubtitle1">@style/TextAppearance.Core.Subtitle1</item>
+        <item name="textAppearanceSubtitle2">@style/TextAppearance.Core.Subtitle2</item>
+        <item name="textAppearanceBody1">@style/TextAppearance.Core.Body1</item>
+        <item name="textAppearanceBody2">@style/TextAppearance.Core.Body2</item>
+        <item name="textAppearanceButton">@style/TextAppearance.Core.Button</item>
+        <item name="textAppearanceCaption">@style/TextAppearance.Core.Caption</item>
+        <item name="textAppearanceOverline">@style/TextAppearance.Core.Overline</item>
+        <item name="textAppearanceChip">@style/TextAppearance.Core.Chip</item>
+        <!-- endregion -->
+
+        <!-- region Material Shape Attributes -->
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.Core.SmallComponent</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.Core.MediumComponent</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.Core.LargeComponent</item>
+        <!-- endregion -->
+
+        <!-- region Component Styles -->
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.MaterialComponents.Dialog.Alert</item>
+        <item name="bottomSheetDialogTheme">@style/ThemeOverlay.Core.BottomSheetDialog</item>
+        <item name="navigationViewStyle">@style/Widget.Core.NavigationView</item>
+        <item name="toolbarStyle">@style/Widget.MaterialComponents.Toolbar.PrimarySurface</item>
+        <!-- endregion -->
+
+        <!--        <item name="android:colorPrimary">@color/cerulean</item>-->
+        <!--        <item name="android:colorAccent">@color/my_sin</item>-->
+        <!--        <item name="colorAccent">@color/my_sin</item>-->
+
+        <!--        <item name="android:textColorPrimary">@color/black</item>-->
+        <!--        <item name="android:textColorSecondary">@color/white</item>-->
+        <!--        <item name="android:navigationBarColor">@color/dawn</item>-->
+        <!--        <item name="android:statusBarColor">@color/dorado</item>-->
+    </style>
+    <style name="AbstractTheme.Core" parent="Theme.MaterialComponents.DayNight">
+        <item name="alphaEmphasisHigh">@dimen/alpha_emphasis_high</item>
+        <item name="alphaEmphasisMedium">@dimen/alpha_emphasis_medium</item>
+        <item name="alphaEmphasisDisabled">@dimen/alpha_emphasis_disabled</item>
+
+        <item name="android:statusBarColor">?colorPrimaryVariant</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:navigationBarColor">?android:colorBackground</item>
+        <item name="android:windowLightNavigationBar" tools:ignore="NewApi">true</item>
+        <item name="android:navigationBarDividerColor" tools:ignore="NewApi">?colorControlHighlight</item>
+
+        <!--Remap legacy AppCompat attributes to MaterialComponent attributes-->
+        <item name="colorPrimaryDark">?colorPrimaryVariant</item>
+        <item name="colorAccent">?colorSecondary</item>
+    </style>
+</resources>

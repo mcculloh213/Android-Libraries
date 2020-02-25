@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- region Default Text Sizing -->
+    <dimen name="text_size_default">12sp</dimen>
+    <dimen name="text_size_fab_long">13sp</dimen>
+    <dimen name="text_size_small">14sp</dimen>
+    <dimen name="text_size_medium">18sp</dimen>
+    <dimen name="text_size_large">24sp</dimen>
+    <dimen name="text_size_xlarge">36sp</dimen>
+    <!-- endregion -->
+
+    <!-- region Padding Definitions -->
+    <dimen name="layout_padding_xsmall">2dp</dimen>
+    <dimen name="layout_padding_small">4dp</dimen>
+    <dimen name="layout_padding_medium">8dp</dimen>
+    <dimen name="layout_padding_large">16dp</dimen>
+    <dimen name="layout_padding_xlarge">32dp</dimen>
+    <!-- endregion -->
+
+    <!-- region Margin Definitions -->
+    <dimen name="layout_margin_xsmall">2dp</dimen>
+    <dimen name="layout_margin_small">4dp</dimen>
+    <dimen name="layout_margin_medium">8dp</dimen>
+    <dimen name="layout_margin_large">16dp</dimen>
+    <dimen name="layout_margin_xlarge">32dp</dimen>
+    <dimen name="layout_margin_xxlarge">64dp</dimen>
+    <!-- endregion -->
+
+    <!-- region Elevation Definitions -->
+    <dimen name="layout_elevation_small">4dp</dimen>
+    <dimen name="layout_elevation_medium">8dp</dimen>
+    <dimen name="layout_elevation_large">16dp</dimen>
+    <!-- endregion -->
+
+    <!-- region Material: Corner Radius -->
+    <dimen name="corner_radius_shallow">4dp</dimen>
+    <dimen name="corner_radius_medium">8dp</dimen>
+    <dimen name="corner_radius_deep">12dp</dimen>
+    <!-- endregion -->
+
+    <!-- region Material: List Items -->
+    <dimen name="material_single_line_item_height_small">48dp</dimen>
+    <dimen name="material_single_line_item_height_medium">56dp</dimen>
+    <dimen name="material_single_line_item_height_large">72dp</dimen>
+    <dimen name="material_single_line_item_padding_small">8dp</dimen>
+    <dimen name="material_single_line_item_padding_medium">12dp</dimen>
+    <dimen name="material_single_line_item_padding_large">16dp</dimen>
+    <dimen name="material_single_line_item_padding_xlarge">24dp</dimen>
+    <dimen name="material_single_line_item_text_size">16sp</dimen>
+    <!-- endregion -->
+
+    <!-- region Misc. -->
+    <dimen name="zero_dp">0dp</dimen>
+    <dimen name="zero_sp">0sp</dimen>
+    <dimen name="material_spacing_xsmall">8dp</dimen>
+    <dimen name="material_spacing_small">12dp</dimen>
+    <dimen name="material_spacing_medium">16dp</dimen>
+    <dimen name="material_spacing_large">32dp</dimen>
+    <!-- endregion -->
+
+    <dimen name="alpha_emphasis_high">@dimen/material_emphasis_high_type</dimen>
+    <dimen name="alpha_emphasis_medium">@dimen/material_emphasis_medium</dimen>
+    <dimen name="alpha_emphasis_disabled">@dimen/material_emphasis_disabled</dimen>
+</resources>
